@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/chat_fragment_scene"
+    tools:context=".ui.chat.ChatFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_messages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/chat_input_area_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/chat_my_item" />
+
+    <yamin.elmakis.bot.ui.chat.ChatInputView
+        android:id="@+id/chat_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_input_area_height"
+        android:background="@color/cyan_100"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <yamin.elmakis.bot.ui.chat.ChatOptionsView
+        android:id="@+id/chat_options_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_input_area_height"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_typing_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_input_area_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/cyan_100"
+        android:paddingStart="@dimen/chat_bubble_padding"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/chat_typing_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bot is typing"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/chat_text_size" />
+
+        <yamin.elmakis.bot.ui.chat.TypingIndicator
+            android:id="@+id/chat_typing_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:indicator_color="@color/light_blue_600"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/chat_typing_text_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

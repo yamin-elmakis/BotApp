@@ -1,0 +1,33 @@
+Bot Simulator App
+
+The is generally designed with Clean Architecture and MVVM in mind.
+
+the project includes several moduls:
+- app
+- remoteDataSource
+- repository
+- domain
+
+the main components in each module are:
+
+app:
+- TypingIndicator: custom view to draw the bouncing dots animation
+- ChatInputView: custom view responsible for the edit text manipulation
+- ChatOptionsView: custom view responsible for the creation of the selection buttons
+- ChatFragment: the main UI handler
+- ImeInsetsAnimationCallback + RootViewDeferringInsetsCallback: responsible for updating when the IME openning on devices running Q version and above
+- KeyboardVisibilityHandler: responsible for updating when the IME openning on devices running versions before Q
+- DI elements: Kodein dependency injection
+
+remoteDataSource:
+- RemoteDataImpl: implementation of the RemoteData interface that simulate the Local-Server Bot.
+
+repository:
+- ChatRepositoryImpl: implementation of the ChatRepository interface, responsible for data manipulation from the server
+- BotResponse: the response object from the server
+- ParserHelper: Gson wrapper 
+
+domain:
+- ChatEntities: app ojects
+- ChatRepository: the interface of the repository
+- ChatUseCase: the main use case of the app, defains the generale abilities of the app 

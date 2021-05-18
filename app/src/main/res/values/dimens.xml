@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chat_input_area_radius">8dp</dimen>
+    <dimen name="chat_input_area_padding">8dp</dimen>
+    <dimen name="chat_input_area_margin">8dp</dimen>
+    <dimen name="chat_input_area_height">60dp</dimen>
+    <dimen name="chat_input_area_stroke_width">2dp</dimen>
+
+    <dimen name="chat_text_size">16sp</dimen>
+    <dimen name="chat_bubble_min_width">30dp</dimen>
+    <dimen name="chat_bubble_margin">60dp</dimen>
+    <dimen name="chat_bubble_padding">12dp</dimen>
+    <dimen name="chat_bubble_radius">60dp</dimen>
+    <dimen name="chat_bubble_spacing">4dp</dimen>
+    <dimen name="chat_bubble_first_spacing">8dp</dimen>
+    <dimen name="chat_bubble_last_spacing">@dimen/chat_input_area_height</dimen>
+
+    <dimen name="chat_options_margin">2dp</dimen>
+
+</resources>

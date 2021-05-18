@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_marginStart="@dimen/chat_bubble_padding"
+    android:layout_marginEnd="@dimen/chat_bubble_margin">
+
+    <TextView
+        android:id="@+id/chat_my_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bubble_background"
+        android:backgroundTint="@color/teal_200"
+        android:minWidth="@dimen/chat_bubble_min_width"
+        android:padding="@dimen/chat_bubble_padding"
+        android:textSize="@dimen/chat_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="so let see that hakj akaa kaasa and yamin is doing it " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

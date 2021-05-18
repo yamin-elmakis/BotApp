@@ -1,0 +1,5 @@
+include ':remoteDataSource'
+include ':repository'
+include ':domain'
+include ':app'
+rootProject.name = "BotApp"

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bot App</string>
+    <string name="error">Something went wrong, please try again</string>
+    <string name="empty_user_input">please write something</string>
+</resources>
